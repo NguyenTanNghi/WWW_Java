@@ -5,9 +5,11 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World! 1" %>
+<h1><%= "Bài tập: Nguyễn Tấn Nghị" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<button><a href="hello-servlet" style="text-decoration: none">Bài 02</a> <br></button>
+<button><a href="user-servlet" style="text-decoration: none">Bài 03</a> <br></button>
+<button><a href="index" style="text-decoration: none">Bài 04</a> <br></button>
 </body>
 </html>
