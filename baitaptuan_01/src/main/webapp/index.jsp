@@ -16,15 +16,18 @@
                 height: 100vh;
                 text-align: center;
             }
+
             h1 {
                 color: #fff;
                 margin-bottom: 40px;
                 animation: fadeIn 1.2s ease-in-out;
             }
+
             .btn-container {
                 display: flex;
                 gap: 20px;
             }
+
             .btn {
                 background: linear-gradient(135deg, #667eea, #764ba2);
                 border: none;
@@ -32,8 +35,9 @@
                 padding: 15px 30px;
                 cursor: pointer;
                 transition: all 0.3s ease;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             }
+
             .btn a {
                 color: white;
                 font-size: 16px;
@@ -41,19 +45,28 @@
                 font-weight: bold;
                 display: block;
             }
+
             .btn:hover {
                 transform: scale(1.08);
                 background: linear-gradient(135deg, #764ba2, #667eea);
-                box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             }
+
             @keyframes fadeIn {
-                from {opacity: 0; transform: translateY(-20px);}
-                to {opacity: 1; transform: translateY(0);}
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
         </style>
     </head>
     <body>
-        <h1><%= "Bài tập: Nguyễn Tấn Nghị - 22685461" %></h1>
+        <h1><%= "Bài tập: Nguyễn Tấn Nghị - 22685461" %>
+        </h1>
         <div class="btn-container">
             <button class="btn"><a href="hello-servlet">Bài 02</a></button>
             <button class="btn"><a href="user-servlet">Bài 03</a></button>

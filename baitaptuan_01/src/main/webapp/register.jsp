@@ -9,7 +9,6 @@
     </head>
     <body>
         <div id="progressBar"></div>
-
         <div class="container">
             <h2>Form Đăng Ký</h2>
             <form method="post" action="registration">
@@ -55,6 +54,6 @@
             </form>
         </div>
 
-        <script src="js/register.js"></script>
+<%--        <script src="js/register.js"></script>--%>
     </body>
 </html>
