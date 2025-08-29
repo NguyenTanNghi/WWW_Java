@@ -39,23 +39,28 @@ public class IndexServlet extends HttpServlet {
         out.println("<head>");
         out.println("<title>" + appTitle + "</title>");
         out.println("<style>");
-        out.println("body { font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 30px; }");
-        out.println("h1 { color: #333; }");
+        out.println("body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #89f7fe, #66a6ff); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }");
+        out.println(".container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); text-align: center; animation: fadeIn 1s ease-in-out; }");
+        out.println("h1 { color: #333; margin-bottom: 20px; }");
+        out.println("p { font-size: 16px; margin: 10px 0; color: #555; }");
         out.println("form { margin-top: 20px; }");
-        out.println("input[type=text] { padding: 8px; width: 250px; border: 1px solid #ccc; border-radius: 4px; }");
-        out.println("input[type=submit] { padding: 8px 16px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; }");
-        out.println("input[type=submit]:hover { background-color: #45a049; }");
-        out.println("p { font-size: 16px; }");
+        out.println("input[type=text] { padding: 10px; width: 250px; border: 1px solid #ccc; border-radius: 8px; transition: all 0.3s ease; }");
+        out.println("input[type=text]:focus { border-color: #66a6ff; box-shadow: 0 0 8px rgba(102,166,255,0.6); outline: none; }");
+        out.println("input[type=submit] { margin-top: 15px; padding: 10px 20px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s; font-weight: bold; }");
+        out.println("input[type=submit]:hover { transform: scale(1.05); background: linear-gradient(135deg, #764ba2, #667eea); }");
+        out.println("@keyframes fadeIn { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform: translateY(0);} }");
         out.println("</style>");
         out.println("</head>");
         out.println("<body>");
+        out.println("<div class='container'>");
         out.println("<h1>Welcome to " + appTitle + "</h1>");
         out.println("<p><strong>Username:</strong> " + username + "</p>");
         out.println("<p><strong>Email:</strong> " + email + "</p>");
         out.println("<form action=\"index\" method=\"post\">");
-        out.println("  Nhập tên của bạn: <input type=\"text\" name=\"guestName\" />");
+        out.println("  <input type=\"text\" name=\"guestName\" placeholder=\"Nhập tên của bạn\" /> <br/>");
         out.println("  <input type=\"submit\" value=\"Gửi\" />");
         out.println("</form>");
+        out.println("</div>");
         out.println("</body></html>");
     }
 
@@ -70,15 +75,19 @@ public class IndexServlet extends HttpServlet {
         out.println("<head>");
         out.println("<title>Chào mừng</title>");
         out.println("<style>");
-        out.println("body { font-family: Arial, sans-serif; background-color: #e6f7ff; padding: 30px; }");
-        out.println("h1 { color: #006699; }");
-        out.println("p { font-size: 16px; }");
+        out.println("body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #ff9a9e, #fad0c4); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }");
+        out.println(".container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); text-align: center; animation: fadeIn 1s ease-in-out; }");
+        out.println("h1 { color: #d6336c; margin-bottom: 20px; }");
+        out.println("p { font-size: 16px; margin: 10px 0; color: #333; }");
+        out.println("@keyframes fadeIn { from {opacity:0; transform: scale(0.9);} to {opacity:1; transform: scale(1);} }");
         out.println("</style>");
         out.println("</head>");
         out.println("<body>");
+        out.println("<div class='container'>");
         out.println("<h1>Chào bạn, " + guestName + "!</h1>");
         out.println("<p><strong>Trang:</strong> " + appTitle + "</p>");
         out.println("<p><strong>Author:</strong> " + username + " (" + email + ")</p>");
+        out.println("</div>");
         out.println("</body></html>");
     }
 }

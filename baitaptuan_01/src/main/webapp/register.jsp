@@ -1,41 +1,60 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
     <head>
-        <title>Form Đăng ký</title>
+        <meta charset="UTF-8">
+        <title>Đăng ký thông tin</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/register.css">
     </head>
     <body>
-        <h2>Form Đăng ký</h2>
-        <form method="post" action="register" name="registrationForm">
-            <label>Họ và tên:</label>
-            <input type="text" name="name" required><br><br>
+        <div id="progressBar"></div>
 
-            <label>Email:</label>
-            <input type="email" name="email" required><br><br>
+        <div class="container">
+            <h2>Form Đăng Ký</h2>
+            <form method="post" action="registration">
+                <div class="input-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="name" placeholder="Họ tên" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="password" placeholder="Mật khẩu" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-venus-mars"></i>
+                    <select name="gender">
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-facebook"></i>
+                    <input type="text" name="facebook" placeholder="Facebook">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-pen"></i>
+                    <textarea name="shortBio" rows="4" placeholder="Giới thiệu ngắn"></textarea>
+                </div>
 
-            <label>Password:</label>
-            <input type="password" name="password" required><br><br>
+                <div class="checkbox-group">
+                    <label><b>Sở thích:</b></label>
+                    <div class="checkbox-items">
+                        <label><input type="checkbox" name="hobbies" value="Đọc sách"> Đọc sách</label>
+                        <label><input type="checkbox" name="hobbies" value="Du lịch"> Du lịch</label>
+                        <label><input type="checkbox" name="hobbies" value="Nghe nhạc"> Nghe nhạc</label>
+                    </div>
+                </div>
 
-            <label>Giới tính:</label>
-            <select name="gender">
-                <option value="Nam">Nam</option>
-                <option value="Nữ">Nữ</option>
-                <option value="Khác">Khác</option>
-            </select><br><br>
+                <button type="submit"><i class="fa fa-paper-plane"></i> Đăng ký</button>
+            </form>
+        </div>
 
-            <label>Sở thích:</label><br>
-            <input type="checkbox" name="hobby" value="Đọc sách"> Đọc sách<br>
-            <input type="checkbox" name="hobby" value="Nghe nhạc"> Nghe nhạc<br>
-            <input type="checkbox" name="hobby" value="Du lịch"> Du lịch<br><br>
-
-            <label>Facebook:</label>
-            <input type="text" name="facebook"><br><br>
-
-            <label>Giới thiệu bản thân:</label><br>
-            <textarea name="shortBio" rows="5" cols="40"></textarea><br><br>
-
-            <input type="submit" value="Đăng ký">
-        </form>
+        <script src="js/register.js"></script>
     </body>
 </html>
-
